@@ -7,7 +7,7 @@ let getInfo = async function (username) {
   return data2;
 };
 
-pulBtn.addEventListener("click", function (e) {
+inputUsername.addEventListener("change", function (e) {
   e.preventDefault();
   let input = inputUsername.value;
   getInfo(input).then((val) => {
@@ -46,7 +46,7 @@ pulBtn.addEventListener("click", function (e) {
     let html2;
     arr.then((val2) => {
       console.log(val2);
-      val2.map(function (value) {
+      val2.forEach(function (value) {
         html2 = `<div class="repolist">
         <ul>
           <li>
